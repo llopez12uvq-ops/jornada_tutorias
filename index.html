@@ -346,6 +346,35 @@ footer{color:#6c7682 !important}
   }
 }
 
+
+
+/* Moodle 5.3 update */
+.release-badge{
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:24px 0 28px;
+  padding:20px 24px;border-radius:22px;background:#fff;border:1px solid rgba(24,33,43,.10);
+  box-shadow:0 10px 24px rgba(18,32,51,.06)
+}
+.release-badge strong{font-size:clamp(1.7rem,3vw,2.7rem);color:var(--blue);letter-spacing:-.03em}
+.release-badge span{color:#536070;font-size:1.02rem;line-height:1.45}
+.feature-grid,.resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.feature-card,.resource-card{
+  background:#fff;border:1px solid rgba(24,33,43,.10);border-radius:22px;padding:22px;
+  box-shadow:0 10px 24px rgba(18,32,51,.05)
+}
+.feature-card h3,.resource-card h3{margin:0 0 9px;font-size:1.18rem}
+.feature-card p,.resource-card p{margin:0;color:#536070;line-height:1.52}
+.small-note{margin-top:20px;color:#66717e;font-size:.97rem;line-height:1.55}
+.link-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.resource-link{
+  display:inline-block;text-decoration:none;font-weight:750;color:#fff;background:#2e6be6;
+  padding:11px 16px;border-radius:999px;transition:.2s
+}
+.resource-link.secondary{background:#fff;color:#2e6be6;border:1px solid rgba(46,107,230,.25)}
+.resource-link:hover{transform:translateY(-1px)}
+.resource-card a{color:#2e6be6;font-weight:700;text-decoration:none}
+.resource-card a:hover{text-decoration:underline}
+@media(max-width:820px){.feature-grid,.resource-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -356,11 +385,13 @@ footer{color:#6c7682 !important}
   <a href="#inicio">Inicio</a>
   <a href="#por-que">Por qué cambia</a>
   <a href="#evolucion">Evolución</a>
+  <a href="#moodle53">Moodle 5.3</a>
   <a href="#estudiantes">Estudiantes</a>
   <a href="#actividad">Actividades</a>
   <a href="#tutorias">Tutorías</a>
   <a href="#ia">IA</a>
   <a href="#prepararnos">Cómo prepararnos</a>
+  <a href="#explorar">Recursos</a>
   <a href="#cierre">Cierre</a>
 </nav>
 
@@ -378,7 +409,7 @@ footer{color:#6c7682 !important}
     <div class="kicker">Universidad Nacional de Quilmes · Tutorías</div>
     <div class="opening-author">Linda Angélica López</div>
     <h1>El cambio de <span class="accent">Moodle</span> que se viene</h1>
-    <p class="lead">Qué necesitamos conocer para acompañar a los estudiantes en una transición que no es solo tecnológica, sino también pedagógica e institucional.</p>
+    <p class="lead">Qué cambia en Moodle y qué aspectos conviene considerar para acompañar a los estudiantes durante la transición.</p>
 </div>
 </section>
 
@@ -402,11 +433,32 @@ footer{color:#6c7682 !important}
     <div class="timeline">
       <div class="stage"><small>Moodle 3.9</small><strong>Tradicional</strong><p>Navegación clásica con interfaz de una generación anterior.</p></div>
       <div class="stage"><small>Moodle 4.x</small><strong>Rediseño</strong><p>Nuevos: índice del curso, organización visual y navegación.</p></div>
-      <div class="stage"><small>Moodle 5.x</small><strong>Consolidación</strong><p>Profundiza la renovación e incorpora nuevas herramientas, evaluación e IA.</p></div>
+      <div class="stage"><small>Moodle 5.x</small><strong>Consolidación</strong><p>Profundiza la renovación e incorpora nuevas funciones de evaluación, navegación e integración con sistemas de IA.</p></div>
     </div>
   </div>
 </section>
 
+<section class="section" id="moodle53">
+  <div class="section-inner reveal">
+    <div class="kicker">Moodle 5.3 · nueva información</div>
+    <h2>Ya está publicada</h2>
+    <div class="release-badge">
+      <strong>5 de octubre de 2026</strong>
+      <span>Fecha oficial de lanzamiento de Moodle 5.3, una versión de soporte extendido (LTS).</span>
+    </div>
+    <p class="lead">La versión 5.3 reúne cambios que pueden ser visibles para estudiantes, docentes y tutorías, junto con otras mejoras destinadas a la administración de la plataforma.</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Interfaz y navegación</h3><p>Modo oscuro, diseños más limpios, tipografía renovada y navegación lineal dentro de los cursos.</p></div>
+      <div class="feature-card"><h3>Enseñanza y evaluación</h3><p>Nuevos recursos para resultados de aprendizaje, ampliación del flujo de evaluación con múltiples calificadores y fecha límite en cuestionarios.</p></div>
+      <div class="feature-card"><h3>Creación de contenidos</h3><p>Nuevos estilos de acordeón y listas en el editor. BigBlueButton aparece habilitado de forma predeterminada en la versión estándar.</p></div>
+      <div class="feature-card"><h3>Búsqueda, seguimiento e IA</h3><p>Mejoras en la búsqueda global, informe de uso de IA por curso e incorporación de Anthropic Claude como proveedor de API en el núcleo.</p></div>
+    </div>
+    <p class="small-note">También incorpora cambios más técnicos: agregaciones temporales en informes personalizados, eliminación asíncrona de cursos, mayor visibilidad de riesgos y auditoría de roles, retiro del tema Classic del núcleo y novedades en OAuth2 y tokens de acceso personal.</p>
+    <div class="link-row">
+      <a class="resource-link" href="https://moodledev.io/general/releases/5.3" target="_blank" rel="noopener">Ver novedades oficiales de Moodle 5.3 ↗</a>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="estudiantes">
   <div class="section-inner reveal">
@@ -481,8 +533,9 @@ footer{color:#6c7682 !important}
     <div class="kicker">Una plataforma que también evoluciona</div>
     <div class="ia-box">
       <h2>Nuevas posibilidades con IA</h2>
-      <p class="lead">Las nuevas versiones incorporan una arquitectura para integrar funciones de inteligencia artificial. Eso no significa que todas vayan a estar disponibles automáticamente en la UNQ: dependerá de decisiones institucionales y de la configuración que se adopte.</p>
-      <p class="lead">Para las tutorías, esto puede abrir nuevas consultas sobre usos permitidos, criterios institucionales y formas de acompañar un uso responsable.</p>
+      <p class="lead">Moodle viene desarrollando una arquitectura para integrar sistemas de inteligencia artificial. En 5.3 se suma Anthropic Claude como proveedor de API en el núcleo y aparece un informe de uso de IA por curso.</p>
+      <p class="lead">Esto no significa que esos sistemas vayan a estar disponibles automáticamente en la UNQ. Su incorporación dependerá de las decisiones institucionales y de la configuración que finalmente se adopte.</p>
+      <p class="lead">Para las tutorías, pueden aparecer consultas sobre usos permitidos, criterios institucionales y formas responsables de utilizar estos sistemas.</p>
     </div>
   </div>
 </section>
@@ -508,11 +561,41 @@ footer{color:#6c7682 !important}
   </div>
 </section>
 
+<section class="section" id="explorar">
+  <div class="section-inner reveal">
+    <div class="kicker">Para seguir explorando</div>
+    <h2>Recursos oficiales de Moodle</h2>
+    <p class="lead">Algunos espacios para consultar información, formarse, intercambiar con la comunidad y recorrer Moodle 5.3.</p>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <h3>MoodleDocs</h3>
+        <p>Documentación y guías sobre funciones, actividades y novedades de Moodle. Incluye una sección específica sobre las nuevas características de Moodle 5.3.</p>
+        <p style="margin-top:12px"><a href="https://docs.moodle.org/all/es/Nuevas_caracter%C3%ADsticas_de_Moodle_5.3" target="_blank" rel="noopener">Consultar MoodleDocs ↗</a></p>
+      </div>
+      <div class="resource-card">
+        <h3>Moodle Academy</h3>
+        <p>Cursos y propuestas de formación para docentes y otros perfiles que trabajan con Moodle. La portada puede consultarse libremente; para participar en los cursos es necesario iniciar sesión o crear una cuenta.</p>
+        <p style="margin-top:12px"><a href="https://moodle.academy/?lang=es" target="_blank" rel="noopener">Ir a Moodle Academy ↗</a></p>
+      </div>
+      <div class="resource-card">
+        <h3>Comunidad Moodle</h3>
+        <p>Espacio para consultar, hacer preguntas e intercambiar experiencias con personas que utilizan Moodle en distintos contextos.</p>
+        <p style="margin-top:12px"><a href="https://moodle.org/?lang=es" target="_blank" rel="noopener">Ir a la comunidad Moodle ↗</a></p>
+      </div>
+      <div class="resource-card">
+        <h3>Moodle Sandbox Demo</h3>
+        <p>Un entorno de demostración de Moodle 5.3 para recorrer cursos y probar funciones con cuentas de docente, estudiante, administrador o gestor.</p>
+        <p style="margin-top:12px"><a href="https://sandbox.moodledemo.net/?lang=es" target="_blank" rel="noopener">Ir a Moodle Sandbox Demo ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="cierre">
   <div class="section-inner reveal">
     <div class="kicker">Cierre</div>
-    <div class="final-line">El cambio de Moodle no modifica el sentido de la tutoría, pero sí el entorno en el que acompañamos.</div>
-    <p class="lead" style="margin-top:28px;">Actualizar Moodle es un cambio tecnológico, pero acompañar esa transición es una tarea pedagógica e institucional.</p>
+    <div class="final-line">Con la actualización de Moodle cambia la experiencia de uso de la plataforma y también algunas de las situaciones que pueden aparecer en el acompañamiento a los estudiantes.</div>
+    <p class="lead" style="margin-top:28px;">Actualizar Moodle es un cambio tecnológico, pero su implementación también requiere acompañar a quienes van a usar la nueva plataforma.</p>
 </div>
 </section>
 
